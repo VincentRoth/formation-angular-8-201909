@@ -14,4 +14,21 @@ export class BookService {
       author: 'Hugo'
     });
   }
+
+  getAll(): Observable<Book[]> {
+    return of([
+      {
+        title: 'Quatreving-treize',
+        author: 'Hugo'
+      },
+      {
+        title: 'Quatreving-quatorze',
+        author: 'Hugo'
+      },
+      {
+        title: 'Quatreving-quinze',
+        author: 'Hugo'
+      }
+    ]);
+  }
 }
