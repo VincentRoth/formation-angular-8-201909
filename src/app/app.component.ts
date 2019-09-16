@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'formation-angular8-AF20190916';
+  title = 'formation-angular8';
 }
