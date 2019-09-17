@@ -63,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "formation-angular8-AF20190916:build"
+            "browserTarget": "formation-angular8-AF20190916:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Quatre-vingt-treize",
+      "author": "Hugo"
+    },
+    {
+      "id": 2,
+      "title": "Le Colonel Chabert",
+      "author": "Balzac"
+    },
+    {
+      "id": 3,
+      "title": "Germinal",
+      "author": "Zola"
+    },
+    {
+      "id": 4,
+      "title": "Les Fleurs du mal",
+      "author": "Baudelaire"
+    }
+  ]
+}
