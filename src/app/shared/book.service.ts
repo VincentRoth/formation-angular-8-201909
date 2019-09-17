@@ -9,15 +9,11 @@ import { Observable, of } from 'rxjs';
 export class BookService {
   constructor(private http: HttpClient) {}
 
-  getOne(): Observable<Book> {
-    return of({
-      id: 0,
-      title: 'Quatreving-treize',
-      author: 'Hugo'
-    });
-  }
-
   getAll(): Observable<Book[]> {
     return this.http.get<Book[]>('/api/books');
+  }
+
+  getById(id: number): Observable<Book> {
+    return this.http.get<Book>(`/api/books/${id}`);
   }
 }

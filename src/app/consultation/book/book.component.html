@@ -1,3 +1,3 @@
-<span appUppercase>{{book.title}}</span><br />
+<a appUppercase [routerLink]="['book', book.id]">{{book.title}}</a><br />
 {{book.author}}
 <button (click)="onBtnClick()">Delete</button>
