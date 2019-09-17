@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from 'src/app/shared/models/book';
-import { BookService } from 'src/app/shared/book.service';
 
 @Component({
   selector: 'app-book',
@@ -8,13 +7,14 @@ import { BookService } from 'src/app/shared/book.service';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-  book: Book;
+  @Input() book: Book;
+  @Output() titleClick: EventEmitter<Book> = new EventEmitter<Book>();
 
-  constructor(private bookService: BookService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.bookService.getOne().subscribe({
-      next: book => (this.book = book)
-    });
+  ngOnInit() {}
+
+  onTitleClick(event: MouseEvent) {
+    this.titleClick.emit(this.book);
   }
 }
