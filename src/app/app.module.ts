@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ConsultationModule } from './consultation/consultation.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TimeInterceptor } from './shared/time-interceptor';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, ConsultationModule],
-  providers: [],
+  imports: [BrowserModule, ConsultationModule, HttpClientModule],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
