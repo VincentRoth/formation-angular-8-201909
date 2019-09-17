@@ -1,9 +1,5 @@
 <ul>
   <li *ngFor="let model of books">
-    <app-book [book]="model" (titleClick)="onClick($event)"></app-book>
+    <app-book [book]="model" (delete)="onDelete($event)"></app-book>
   </li>
 </ul>
-
-<p *ngIf="message">
-  You have clicked on {{message}}.
-</p>

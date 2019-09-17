@@ -19,7 +19,8 @@ export class BookListComponent implements OnInit {
     });
   }
 
-  onClick(book: Book) {
-    this.message = book.title;
+  onDelete(book: Book) {
+    const index = this.books.indexOf(book);
+    this.books.splice(index, 1);
   }
 }

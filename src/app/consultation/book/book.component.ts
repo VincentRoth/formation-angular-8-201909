@@ -8,13 +8,13 @@ import { Book } from 'src/app/shared/models/book';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book;
-  @Output() titleClick: EventEmitter<Book> = new EventEmitter<Book>();
+  @Output() delete: EventEmitter<Book> = new EventEmitter<Book>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  onTitleClick(event: MouseEvent) {
-    this.titleClick.emit(this.book);
+  onBtnClick() {
+    this.delete.emit(this.book);
   }
 }
