@@ -1,1 +1,5 @@
-<p>author-edit works!</p>
+<form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name</label>
+  <input id="name" formControlName="name" />
+  <button type="submit">Submit</button>
+</form>

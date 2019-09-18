@@ -35,5 +35,27 @@
       "author": "123",
       "id": 7
     }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Hugo"
+    },
+    {
+      "id": 2,
+      "name": "Balzac"
+    },
+    {
+      "name": "test",
+      "id": 3
+    },
+    {
+      "name": "Test",
+      "id": 4
+    },
+    {
+      "name": "Test3",
+      "id": 5
+    }
   ]
 }

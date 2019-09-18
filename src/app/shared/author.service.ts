@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Book } from './models/book';
 import { AbstractCrudService } from './abstractCrud.service';
+import { Author } from './models/author';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BookService extends AbstractCrudService<Book> {
+export class AuthorService extends AbstractCrudService<Author> {
   constructor(protected http: HttpClient) {
-    super(http, '/api/books');
+    super(http, '/api/authors');
   }
 }

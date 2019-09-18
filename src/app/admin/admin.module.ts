@@ -4,7 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { Routes, RouterModule } from '@angular/router';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { AuthorEditComponent } from './author-edit/author-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -20,6 +20,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AdminComponent, BookEditComponent, AuthorEditComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), FormsModule]
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule
+  ]
 })
 export class AdminModule {}
