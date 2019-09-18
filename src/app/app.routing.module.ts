@@ -3,7 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'consultation', pathMatch: 'full' }
+  { path: '', redirectTo: 'consultation', pathMatch: 'full' },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then(mod => mod.AdminModule)
+  }
 ];
 
 @NgModule({
