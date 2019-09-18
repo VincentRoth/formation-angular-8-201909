@@ -17,12 +17,12 @@ export class BookService {
     return this.http.get<Book>(`/api/books/${id}`);
   }
 
-  create(model: Book): Observable<any> {
-    return this.http.post('/api/books', model);
+  create(model: Book): Observable<Book> {
+    return this.http.post<Book>('/api/books', model);
   }
 
-  update(model: Book): Observable<any> {
-    return this.http.put(`/api/books/${model.id}`, model);
+  update(model: Book): Observable<Book> {
+    return this.http.put<Book>(`/api/books/${model.id}`, model);
   }
 
   delete(id: number): Observable<any> {

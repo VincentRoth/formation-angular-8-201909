@@ -2,7 +2,7 @@
   "books": [
     {
       "id": 1,
-      "title": "Quatre-vingt-treize",
+      "title": "Quatre-vingt-quatorze",
       "author": "Hugo"
     },
     {
@@ -29,6 +29,11 @@
       "title": "test2",
       "author": "Charles",
       "id": 6
+    },
+    {
+      "title": "test3",
+      "author": "123",
+      "id": 7
     }
   ]
 }
