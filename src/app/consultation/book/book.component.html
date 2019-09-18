@@ -1,3 +1,4 @@
 <a appUppercase [routerLink]="['book', book.id]">{{book.title}}</a><br />
 {{book.author}}
+<button [routerLink]="['/admin/book', book.id]">Edit</button>
 <button (click)="onBtnClick()">Delete</button>

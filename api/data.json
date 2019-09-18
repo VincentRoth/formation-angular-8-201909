@@ -19,6 +19,16 @@
       "id": 4,
       "title": "Les Fleurs du mal",
       "author": "Baudelaire"
+    },
+    {
+      "title": "test",
+      "author": "Hugo",
+      "id": 5
+    },
+    {
+      "title": "test2",
+      "author": "Charles",
+      "id": 6
     }
   ]
 }
