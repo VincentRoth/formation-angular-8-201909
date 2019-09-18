@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthorService } from 'src/app/shared/author.service';
 
 @Component({
@@ -14,8 +14,15 @@ export class AuthorEditComponent implements OnInit {
 
   ngOnInit() {
     this.authorForm = new FormGroup({
-      name: new FormControl()
+      name: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(4)
+      ])
     });
+  }
+
+  get name() {
+    return this.authorForm.get('name');
   }
 
   onSubmit() {

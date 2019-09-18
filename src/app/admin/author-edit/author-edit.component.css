@@ -1,0 +1,7 @@
+.error {
+  border-color: red;
+}
+
+:host {
+  margin: 10px;
+}

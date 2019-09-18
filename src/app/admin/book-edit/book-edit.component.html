@@ -1,6 +1,8 @@
-<form (ngSubmit)="onSubmit()">
+<form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
   <label for="title">Title</label>
-  <input id="title" name="title" [(ngModel)]="book.title" />
+  <input id="title" name="title" [(ngModel)]="book.title" #title="ngModel" required minlength="4" />
+  <p *ngIf="bookForm.submitted && title.errors?.required">Value is required</p>
+  <p *ngIf="bookForm.submitted && title.errors?.minlength">MinLength is {{title.errors.minlength.requiredLength}}</p>
 
   <label for="author">Author</label>
   <input id="author" name="author" [(ngModel)]="book.author" />

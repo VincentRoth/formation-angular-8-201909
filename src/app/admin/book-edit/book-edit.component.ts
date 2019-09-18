@@ -34,16 +34,18 @@ export class BookEditComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    const observer = {
-      complete: () => {
-        this.router.navigate(['consultation']);
+  onSubmit(form) {
+    if (form.form.valid) {
+      const observer = {
+        complete: () => {
+          this.router.navigate(['consultation']);
+        }
+      };
+      if (this.book.id) {
+        this.bookService.update(this.book).subscribe(observer);
+      } else {
+        this.bookService.create(this.book).subscribe(observer);
       }
-    };
-    if (this.book.id) {
-      this.bookService.update(this.book).subscribe(observer);
-    } else {
-      this.bookService.create(this.book).subscribe(observer);
     }
   }
 }
