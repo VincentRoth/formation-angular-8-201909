@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DevantureComponent } from './devanture.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('DevantureComponent', () => {
   let component: DevantureComponent;
@@ -8,9 +9,9 @@ describe('DevantureComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DevantureComponent ]
-    })
-    .compileComponents();
+      declarations: [DevantureComponent],
+      imports: [RouterTestingModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

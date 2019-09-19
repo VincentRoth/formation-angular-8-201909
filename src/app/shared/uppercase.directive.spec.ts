@@ -2,7 +2,12 @@ import { UppercaseDirective } from './uppercase.directive';
 
 describe('UppercaseDirective', () => {
   it('should create an instance', () => {
-    const directive = new UppercaseDirective();
+    const element = {
+      nativeElement: {
+        style: null
+      }
+    };
+    const directive = new UppercaseDirective(element);
     expect(directive).toBeTruthy();
   });
 });

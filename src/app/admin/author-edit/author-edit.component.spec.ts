@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthorEditComponent } from './author-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AuthorEditComponent', () => {
   let component: AuthorEditComponent;
@@ -8,9 +10,9 @@ describe('AuthorEditComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthorEditComponent ]
-    })
-    .compileComponents();
+      declarations: [AuthorEditComponent],
+      imports: [ReactiveFormsModule, HttpClientTestingModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
