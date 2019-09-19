@@ -6,6 +6,7 @@ import { ConsultationModule } from './consultation/consultation.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TimeInterceptor } from './shared/time-interceptor';
 import { AppRoutingModule } from './app.routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserModule,
     ConsultationModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true }
