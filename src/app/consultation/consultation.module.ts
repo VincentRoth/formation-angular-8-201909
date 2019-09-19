@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DevantureComponent } from './devanture/devanture.component';
+import { AppMaterialModule } from '../app-material.module';
 
 const routes: Routes = [
   {
@@ -28,7 +29,12 @@ const routes: Routes = [
     BookDetailComponent,
     DevantureComponent
   ],
-  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    SharedModule,
+    RouterModule.forChild(routes),
+    AppMaterialModule
+  ],
   exports: []
 })
 export class ConsultationModule {}

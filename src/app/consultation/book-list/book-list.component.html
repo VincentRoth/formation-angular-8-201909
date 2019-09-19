@@ -1,5 +1,1 @@
-<ul>
-  <li *ngFor="let model of books">
-    <app-book [book]="model" (delete)="onDelete($event)"></app-book>
-  </li>
-</ul>
+<app-book *ngFor="let model of books" [book]="model" (delete)="onDelete($event)"></app-book>

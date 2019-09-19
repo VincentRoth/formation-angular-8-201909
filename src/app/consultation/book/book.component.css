@@ -1,0 +1,7 @@
+:host {
+  flex: 1 1 33%;
+}
+
+.book-card {
+  margin: 1em;
+}
